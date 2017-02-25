@@ -11,16 +11,14 @@ var gameNumber = randomNumberBetween(minValue, maxValue);
 
 
 function randomNumberBetween (min, max) {
-	//var result = Math.floor(Math.random() * max) + min;
-	var result = Math.floor(Math.random() * (max - min + 1)) + min;
-	return result;
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 console.log(gameNumber);
 
 function rangeChange() {
-	var lowestNumber = document.getElementById('lowestNumber').value;
-	var highestNumber = document.getElementById('highestNumber').value;
+	var lowestNumber = parseInt(document.getElementById('lowestNumber').value);
+	var highestNumber = parseInt(document.getElementById('highestNumber').value);
 	document.getElementById('minValue').innerHTML = lowestNumber;
 	document.getElementById('maxValue').innerHTML = highestNumber;
 	gameNumber = randomNumberBetween(lowestNumber, highestNumber);
@@ -31,7 +29,7 @@ function compare (htmlNumber) {
 	var guessedNumber = document.getElementById('guess box').value;	
 	if (gameNumber === guessedNumber){
 		console.log('you won');
-		document.getElementById('result').innerHTML = 'You won!';
+		document.getElementById('result').innerHTML = 'You got it right!';
 	}
 
 	if (gameNumber < guessedNumber) {
