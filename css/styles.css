@@ -1,5 +1,26 @@
 body {
 	font-family: monospace;
 	text-decoration-color: white;
-	background-color: #3498db;
+	background-color: #000;
+	color: #FFF;
 }
+
+#result {
+	color:#FF0;
+}
+
+.screen {
+	text-align: center;
+}
+.content-left {
+	width: 600px;
+	display: inline-block;
+	text-align: justify;
+}
+
+.content-right {
+	margin-left: 30px;
+	width:400px;
+	display: inline-block;
+	text-align: justify;
+ }

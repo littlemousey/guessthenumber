@@ -12,10 +12,22 @@
 </head>
 
 <body>
-	<h1>Guess the number game</h1>
-	<p>Guess the number. The number is between <span id="minValue"></span> and <span id="maxValue"></span>.</p>
-		<input type="number" id="guess box" placeholder="0" />
-		<button type="button" onclick="compare()">Guess!</button>
+	<div class="screen">
+		<h1>Guess the number game</h1>
+		<div class="content-left">
+			<p>
+				Guess the number. The number is between <span id="minValue"></span> and <span id="maxValue"></span>.
+				You can change the range of the numbers on the right. Do mind, when you change the range a new number is drawn.
+			</p>
+			<input type="number" id="guess box" placeholder="0" />
+			<button type="button" onclick="compare()">Guess!</button>
+			<p id="result"></p>
+		</div>
+		<div class="content-right">
+			<p>Lowest number: <input type="number" id="lowestNumber" onchange="rangeChange()" /></p>
+			<p>Highest number: <input type="number" id="highestNumber" onchange="rangeChange()"/></span></p>
+		</div>
+	</div>
 	<script src="js/script.js"></script>
 </body>
 </html>
