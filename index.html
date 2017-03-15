@@ -19,7 +19,7 @@
 				Guess the number. The number is between <span id="minValue"></span> and <span id="maxValue"></span>.
 				You can change the range of the numbers on the right. Do mind, when you change the range a new number is drawn.
 			</p>
-			<input type="number" id="guess box" placeholder="0" />
+			<input type="number" id="guessbox" placeholder="0" />
 			<button type="button" onclick="compare()">Guess!</button>
 		</div>
 		<div class="content-right">
@@ -27,6 +27,7 @@
 			<p>Highest number: <input type="number" id="highestNumber" onchange="rangeChange()"/></span></p>
 		</div>
 		<p id="result"></p>
+		<div id="gameWon"></div>
 	</div>
 	<script src="js/script.js"></script>
 </body>
